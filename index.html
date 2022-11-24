@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | IP Address Tracker</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+  integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+  integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+
+  <div class="main">
+    <div class="hiro">
+      <h1 class="hiro-title">IP Address Tracker</h1>
+
+      <form class="search-box">
+        <input type="text" class="search" placeholder="Search for any IP address or domain">
+      <button type="submit" class="btn"><i class="bi bi-chevron-right icon"></i></button>  
+      </form>
+
+      <ul class="hiro-container">
+        <li class="item">
+          <span class="title">IP Address</span>
+          <span class="description">192.212.174.101</span>
+        </li>
+
+        <li class="item">
+          <span class="title">Location</span>
+          <span class="description">Brooklyn, NY 10001</span>
+        </li>
+
+        <li class="item">
+          <span class="title">TimeZone</span>
+          <span class="description">UTC -05:00</span>
+        </li>
+
+        <li class="item">
+          <span class="title">ISP</span>
+          <span class="description">SpaceX  Starlink</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="map">
+      <div id="map"></div>
+    </div>
+  </div>
+
+ 
+
+  
+
+ <!-- add offset value dynamically using the API -->
+  
+
+ <script src="./app.js"></script>
+</body>
+</html>

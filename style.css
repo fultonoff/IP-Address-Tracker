@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
+
+:root {
+    --grey-dark: hsl(0, 0%, 17%);
+    --gray-light: hsl(0, 0%, 59%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Rubik', sans-serif;
+}
+
+.main{
+    height: 100vh;
+    width: 100%;
+}
+
+.hiro{
+    background: url(./images/pattern-bg.png) ;
+    background-position: cover;
+    background-size: cover;
+    width: 100%;
+    height: 40vh;
+    padding: 3rem;
+    position: relative;
+    z-index: 10;
+}
+ .hiro-title{
+    text-align: center;
+    color: #ffffff;
+}
+
+.search-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+    
+}
+
+.search-box .search{
+    min-width: 50rem;
+    padding: 2rem;
+    border-radius: 1rem 0 0 1rem;
+    color: var(--gray-light);
+    font-family: inherit;
+    border: none;
+    font-size: 1.8rem;
+}
+.search-box .btn{
+    background-color: none;
+    border: none;
+    cursor: pointer;
+}
+.search-box .icon{
+    padding: 2.15rem;
+    background-color: var(--grey-dark);
+    color: #ffffff;
+    border-radius: 0 1rem 1rem 0;
+    font-size: 1.8rem;
+}
+
+ .hiro-container{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 0 1.5rem 2.5rem rgba(0,0,0,0.2);
+    padding:4rem 2rem;
+    border-radius: 1rem;
+    display: flex;
+    gap: 5rem;
+    z-index: 10;
+}
+
+.hiro-container .item:not(:last-child){
+    border-right: 1px solid var(--gray-light);
+    padding-right: 2rem;
+}
+
+.hiro-container .item{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: calc(100% / 4);
+}
+
+.hiro-container .item .title{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    color: var(--gray-light);
+}
+.hiro-container .item .description{
+    font-size: 2.4rem;
+    font-weight: 500;
+}
+
+#map { height: 60vh; 
+z-index: 1;}
+
+
+/*  */
+
+
+
+
+@media screen and (max-width: 900px) {
+    
+    html{
+        font-size: 50%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    
+    html{
+        font-size: 43.75%;
+    }
+}
+
+@media screen and (max-width: 574px) {
+    
+    .hiro-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+    }
+
+    .hiro-container .item:not(:last-child){
+    border-right: 0;
+    padding: 0;
+}
+
+.hiro-container .item{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    width: 100%;
+}
+
+.hiro-container .item .description{
+    font-size: 3.5rem;
+    font-weight: 500;
+}
+
+.search-box .search{
+    min-width: 80%;
+}
+}
+
+@media screen and (max-width: 400px) {
+    
+    html{
+        font-size: 31.25%;
+    }
+}
